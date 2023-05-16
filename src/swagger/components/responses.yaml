@@ -1,0 +1,39 @@
+BadRequest:
+  description: 잘못된 요청
+  content:
+    application/json:
+      schema:
+        $ref: './schemas.yaml#/Error'
+      example:
+        status: 400
+        message: 'Bad Request'
+
+InternalServerError:
+  description: 서버 에러
+  content:
+    application/json:
+      schema:
+        $ref: './schemas.yaml#/Error'
+      example:
+        status: 500
+        message: 서버 에러
+
+Unauthorized:
+  description: Unauthorized
+  content:
+    application/json:
+      schema:
+        $ref: './schemas.yaml#/Error'
+      example:
+        status: 401
+        message: 'Unauthorized'
+
+RequestError:
+  description: Precondition Failed
+  content:
+    application/json:
+      schema:
+        $ref: './schemas.yaml#/Error'
+      example:
+        status: 412
+        message: 'Request Error'

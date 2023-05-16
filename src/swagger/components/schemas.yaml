@@ -1,0 +1,50 @@
+Error:
+  type: object
+  properties:
+    status:
+      type: integer
+    message:
+      type: string
+      
+Setting:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        company_id:
+          type: integer
+          description: '회사 식별자'
+        name:
+          type: string
+          description: '회사명'
+        is_something_used:
+          type: boolean
+          description: '기능 사용 여부'
+
+        created_by:
+          type: integer
+          description: '생성자 식별자'
+        updated_by:
+          type: integer
+          description: '수정자 식별자'
+        created_at:
+          type: string
+          format: date-time
+          description: '생성일'
+        updated_at:
+          type: string
+          format: date-time
+          description: '수정일'
+    meta:
+      type: object
+
+SettingUpdate:
+  type: object
+  properties:
+    name:
+      type: string
+      description: '회사명'
+    is_something_used:
+      type: boolean
+      description: '기능 사용 여부'

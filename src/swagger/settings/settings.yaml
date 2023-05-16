@@ -1,0 +1,55 @@
+get:
+  tags:
+    - 'Setting'
+  summary: '설정 조회'
+  responses:
+    '200':
+      description: 'Success'
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas.yaml#/Setting'
+          examples:
+            settingExample:
+              $ref: '../components/examples.yaml#/Setting'
+
+    '401':
+      $ref: '../components/responses.yaml#/Unauthorized'
+patch:
+  tags:
+    - 'Setting'
+  summary: '설정 수정'
+  requestBody:
+    description: '설정 업데이트 요청'
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas.yaml#/SettingUpdate'
+        examples:
+          settingUpdateExample:
+            $ref: '../components/examples.yaml#/SettingUpdate'
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: '../components/schemas.yaml#/SettingUpdate'
+        examples:
+          settingUpdateExample:
+            $ref: '../components/examples.yaml#/SettingUpdate'
+  responses:
+    '200':
+      description: 'Success'
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas.yaml#/Setting'
+          examples:
+            settingExample:
+              $ref: '../components/examples.yaml#/Setting'
+    '400':
+      $ref: '../components/responses.yaml#/BadRequest'
+    '401':
+      $ref: '../components/responses.yaml#/Unauthorized'
+    '412':
+      $ref: '../components/responses.yaml#/RequestError'
+
+
+
