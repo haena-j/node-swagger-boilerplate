@@ -1,0 +1,17 @@
+get:
+  tags:
+    - 'User'
+  summary: '사용자 조회'
+  responses:
+    '200':
+      description: 'Success'
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas.yaml#/User'
+          examples:
+            settingExample:
+              $ref: '../components/examples.yaml#/User'
+
+    '400':
+      $ref: '../components/responses.yaml#/BadRequest'

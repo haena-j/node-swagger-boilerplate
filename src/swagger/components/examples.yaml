@@ -1,3 +1,4 @@
+# Setting
 Setting:
   value:
     data:
@@ -14,3 +15,11 @@ SettingUpdate:
   value:
     name: 'sample update'
     is_something_used: false
+
+# User
+User:
+  value:
+    id: 1
+    name: "홍길동"
+    email: "hong@example.com"
+    createdAt: "2023-05-17T10:00:00Z"

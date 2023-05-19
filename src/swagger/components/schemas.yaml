@@ -5,7 +5,8 @@ Error:
       type: integer
     message:
       type: string
-      
+
+# Setting
 Setting:
   type: object
   properties:
@@ -48,3 +49,26 @@ SettingUpdate:
     is_something_used:
       type: boolean
       description: '기능 사용 여부'
+
+# User
+User:
+  type: object
+  properties:
+    id:
+      type: integer
+      format: int64
+      description: 사용자의 고유 아이디
+    name:
+      type: string
+      description: 사용자의 이름
+    email:
+      type: string
+      description: 사용자의 이메일 주소
+    createdAt:
+      type: string
+      format: date-time
+      description: 사용자 계정 생성 일시
+  required:
+    - id
+    - name
+    - email

@@ -12,6 +12,8 @@ tags: []
 paths:
   /settings:
     $ref: "./settings/settings.yaml"
+  /users:
+    $ref: "./users/users.yaml"
 
 security:
   - X-Hiworks-Jwt: []
