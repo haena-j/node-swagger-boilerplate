@@ -16,8 +16,7 @@ paths:
     $ref: "./users/users.yaml"
 
 security:
-  - X-Hiworks-Jwt: []
-  - Authorization-Type: []
+  - X-Jwt: []
 
 components:
   schemas:
