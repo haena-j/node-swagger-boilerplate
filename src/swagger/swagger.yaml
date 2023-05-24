@@ -14,9 +14,12 @@ paths:
     $ref: "./settings/settings.yaml"
   /users:
     $ref: "./users/users.yaml"
-
+  /users/{id}:
+    $ref: "./users/user.yaml"
+  
 security:
   - X-Jwt: []
+  - Authorization-Type: []
 
 components:
   schemas:

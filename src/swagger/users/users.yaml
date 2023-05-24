@@ -8,10 +8,32 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas.yaml#/User'
-          examples:
-            settingExample:
-              $ref: '../components/examples.yaml#/User'
-
+            type: object
+            properties:
+              data:
+                $ref: '#/schemas/User'
     '400':
       $ref: '../components/responses.yaml#/BadRequest'
+
+schemas:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      name:
+        type: string
+      email:
+        type: string
+      createdAt:
+        type: string
+        format: date-time
+examples:
+  User:
+    value:
+      id: 1
+      name: "홍길동"
+      email: "test@test.com"
+      createdAt: "2023-05-17T10:00:00Z"
+        
